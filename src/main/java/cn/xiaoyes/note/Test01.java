@@ -40,9 +40,45 @@ public class Test01 {
         System.out.println(1 / 2 + 1);
 
         int ss = 3424;
-        while (ss > 0){
+        while (ss > 0) {
             System.out.println(ss % 10);
             ss /= 10;
         }
+    }
+
+
+}
+
+//
+//class OverrideDemo{
+//
+//
+//    public String run(String text){
+//        return "";
+//    }
+//    public int run(String text){
+//        return 0;
+//    }
+//    public String run(){
+//        return "";
+//    }
+//    public String run(int text){
+//        return "";
+//    }
+//}
+class Person {
+    public void printValue(int i, int j) {/*…*/ }
+
+    public void printValue(int i) {/*...*/ }
+}
+
+class Teacher123 extends Person {
+    public void printValue() {/*...*/ }
+
+    public void printValue(int i) {/*...*/}
+
+    public static void main(String args[]) {
+        Person t = new Teacher123();
+        t.printValue(10);
     }
 }

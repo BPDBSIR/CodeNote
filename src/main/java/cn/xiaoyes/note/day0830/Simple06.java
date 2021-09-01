@@ -28,4 +28,5 @@ public class Simple06 {
         return str;
     }
 
+
 }
