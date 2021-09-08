@@ -1,6 +1,6 @@
 package cn.xiaoyes.note.day0906;
 
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,8 +12,7 @@ import java.util.List;
 public class Simple03 {
     public static void main(String[] args) {
         String[] strs = {"12345", "67891", "12347809933", "98765432102", "67891", "12347809933"};
-        List<String> data = new LinkedList<>();
-        for (String str : strs) {
+        /*for (String str : strs) {
             if (!data.contains(str)) {
                 data.add(str);
             }
@@ -25,6 +24,17 @@ public class Simple03 {
         System.out.println();
         for (String d : data) {
             System.out.print(d + ", ");
+        }*/
+
+        List<String> data = new LinkedList<>(Arrays.asList(strs));
+        for (int i = 0; i < data.size(); i++) {
+            for (int x = i + 1; x < data.size(); x++) {
+                if (data.get(i).equals(data.get(x))){
+                    data.remove(x);
+                    break;
+                }
+            }
         }
+        System.out.println(data);
     }
 }
