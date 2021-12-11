@@ -5,11 +5,14 @@ package cn.xiaoyes.note.day1211;
  */
 public class Simple04 {
     public static void main(String[] args) {
-        int m = 10;
+        int m = 0;
         int cur = 100;
         for (int i = 0; i < 10; i++) {
             m += cur;
-            cur /= 2;
+            if (i == 9){
+                break;
+            }
+            m += cur /= 2;
         }
         System.out.println(m);
     }
